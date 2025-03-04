@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 const pageTitle = "私について";
 
 const identity = {
@@ -13,12 +15,25 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "ドキュメン�
 const happy = true;
 const finished = false;
 const goal = 3;
+
+const skillColor = "navy";
 ---
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
+    <style define:vars={{skillColor}}>
+      h1 {
+        color: purple;
+        font-size: 4rem;
+      }
+      .skill {
+        color: var(--skillColor);
+        font-weight: bold;
+      }
+    </style>
+    
   </head>
   <body>
     <a href="/">ホーム</a>
